@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-16 08:07:40 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMDk7IjAzOjIxOjQyICI7Mjk2Ng=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMTY7IjA4OjA3OjQwICI7NjszMDg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, c" type="Real" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Insira o capital investido: &quot;" newline="True"/>
+            <input variable="c"/>
+            <output expression="&quot;Insira a taxa de juros: &quot;" newline="True"/>
+            <input variable="i"/>
+            <output expression="&quot;Insira o prazo do investimento: &quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="fv(c,i,n)" newline="True"/>
+        </body>
+    </function>
+    <function name="fv" type="Real" variable="fv">
+        <parameters>
+            <parameter name="c" type="Real" array="False"/>
+            <parameter name="n" type="Real" array="False"/>
+            <parameter name="i" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fv" type="Real" array="False" size=""/>
+            <assign variable="fv" expression="(c * (1 + i))^n"/>
+        </body>
+    </function>
+</flowgorithm>

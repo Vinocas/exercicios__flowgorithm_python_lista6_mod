@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-09 06:17:30 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMDk7IjA1OjMwOjAwICI7Mjk2Mg=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMDk7IjA2OjE3OjMwICI7MzszMDgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ano" type="Integer" array="False" size=""/>
+            <output expression="&quot;Insira um ano: &quot;" newline="True"/>
+            <input variable="ano"/>
+            <if expression="bissexto(ano)">
+                <then>
+                    <output expression="&quot;O ano inserido &#233; bissexto!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O ano inserido n&#227;o &#233; bissexto!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="bissexto" type="Boolean" variable="bissexto">
+        <parameters>
+            <parameter name="ano" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="bissexto" type="Boolean" array="False" size=""/>
+            <if expression="ano mod 4 = 0 and ano mod 100 != 0 or ano mod 400 = 0">
+                <then>
+                    <assign variable="bissexto" expression="true"/>
+                </then>
+                <else>
+                    <assign variable="bissexto" expression="false"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

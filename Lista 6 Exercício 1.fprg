@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-09 03:40:48 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMDk7IjAzOjIxOjQyICI7Mjk2Ng=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMDk7IjAzOjQwOjQ4ICI7MTszMDgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o valor de n&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="par(n)">
+                <then>
+                    <output expression="n &amp; &quot; &#233; par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="n &amp; &quot; n&#227;o &#233; par&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="par" type="Boolean" variable="epar">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="epar" type="Boolean" array="False" size=""/>
+            <if expression="n mod 2 = 0">
+                <then>
+                    <assign variable="epar" expression="true"/>
+                </then>
+                <else>
+                    <assign variable="epar" expression="false"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

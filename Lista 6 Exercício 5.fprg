@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-16 08:30:20 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMDk7IjA2OjIwOjIyICI7Mjk2Ng=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMTY7IjA4OjMwOjIwICI7MjszMDc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Insira um n&#250;mero:&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n &gt; 1">
+                <then>
+                    <if expression="primo(n)">
+                        <then>
+                            <output expression="&quot;O n&#250;mero &#233; primo!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;O n&#250;mero n&#227;o &#233; primo!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;O n&#250;mero &#233; primo!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="primo" type="Boolean" variable="primo">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="primo" type="Boolean" array="False" size=""/>
+            <declare name="c, mult" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="0"/>
+            <assign variable="mult" expression="0"/>
+            <for variable="c" start="1" end="n" direction="inc" step="1">
+                <if expression="n mod c = 0">
+                    <then>
+                        <assign variable="mult" expression="mult + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="mult = 2">
+                <then>
+                    <assign variable="primo" expression="true"/>
+                </then>
+                <else>
+                    <assign variable="primo" expression="false"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

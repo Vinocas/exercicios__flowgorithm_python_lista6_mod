@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-16 08:51:33 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMTY7IjA4OjMwOjIxICI7Mjk2Ng=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMTY7IjA4OjUxOjMzICI7MjszMDgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o valor de a: &quot;" newline="False"/>
+            <input variable="a"/>
+            <output expression="&quot;Digite o valor de b: &quot;" newline="False"/>
+            <input variable="b"/>
+            <output expression="&quot;Digite o valor de c: &quot;" newline="False"/>
+            <input variable="c"/>
+            <output expression="raiz(a,b,c)" newline="True"/>
+        </body>
+    </function>
+    <function name="raiz" type="String" variable="raiz">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+            <parameter name="c" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="raiz" type="String" array="False" size=""/>
+            <declare name="delta, x1, x2" type="Real" array="False" size=""/>
+            <assign variable="delta" expression="(b^2) - (4*a*c)"/>
+            <if expression="delta &gt; 0">
+                <then>
+                    <assign variable="x1" expression="(-b+(delta^0.5))/(2*a)"/>
+                    <assign variable="x2" expression="-(b-(delta^0.5))/(2*a)"/>
+                    <assign variable="raiz" expression="&quot;x1 = &quot; &amp; x1 &amp; &quot; e x2 = &quot; &amp; x2"/>
+                </then>
+                <else>
+                    <assign variable="raiz" expression="&quot;Valor de &#916; &#233; negativo, logo n&#227;o existem ra&#237;zes reais!&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

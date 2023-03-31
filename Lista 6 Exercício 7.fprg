@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-16 09:18:35 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMTY7IjA5OjA5OjI5ICI7Mjk4MQ=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDUtMTY7IjA5OjE4OjM1ICI7MTszMDg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, p" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o valor de n: &quot;" newline="False"/>
+            <input variable="n"/>
+            <output expression="&quot;Digite o valor de p: &quot;" newline="True"/>
+            <input variable="p"/>
+            <output expression="&quot;Combina&#231;&#227;o (n,p) = &quot; &amp; combinacao(n,p)" newline="True"/>
+            <output expression="&quot;Arranjo (n,p) = &quot; &amp; arranjo(n,p)" newline="True"/>
+        </body>
+    </function>
+    <function name="arranjo" type="Real" variable="res">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="p" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="res" type="Real" array="False" size=""/>
+            <assign variable="res" expression="(fatorial(n)/fatorial(n-p))"/>
+        </body>
+    </function>
+    <function name="combinacao" type="Real" variable="res">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="p" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="res" type="Real" array="False" size=""/>
+            <assign variable="res" expression="(fatorial(n)/fatorial(p))*fatorial(n-p)"/>
+        </body>
+    </function>
+    <function name="fatorial" type="Real" variable="res">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="res, fat, i" type="Real" array="False" size=""/>
+            <assign variable="fat" expression="1"/>
+            <assign variable="i" expression="2"/>
+            <while expression="i &lt;= n">
+                <assign variable="fat" expression="fat * i"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="res" expression="fat"/>
+        </body>
+    </function>
+</flowgorithm>
